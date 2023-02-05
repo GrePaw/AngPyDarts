@@ -1,2 +1,75 @@
-<p>classicgamescoresheet works!</p>
-<a [routerLink]="['/landingpageclassicgame']">Go to component landingpageclassicgame</a>
+<div class="container">
+    <p>Let's play darts!</p>
+    <div class="upper-data">
+        <img src="../assets/background_dartboard.jpg">
+        <div class="upper-container">
+            <div class="top-left-side">
+                <button class="button-30" role="button" [routerLink]="['/landingpageclassicgame']">Home</button>
+            </div>
+            <div class="top-right-side">
+                <table class="upper-table">
+                    <thead class = "upper-table thead tr">
+                        <tr>
+                            <th>Name</th>
+                            <th>Current value</th>
+                            <th>Current average</th>
+                            <th>Previous throw</th>
+                            <th>Last game average</th>
+                            <th>Long time average</th>
+                        </tr>
+                    </thead>
+                    <tbody class = "upper-table tbody tr">
+                        <tr>
+                            <td>Dom</td>
+                            <td>267</td>
+                            <td>30</td>
+                            <td>21</td>
+                            <td>43</td>
+                            <td>41</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>Melissa</td>
+                            <td>288</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>20</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                          <td>Peter</td>
+                          <td>235</td>
+                          <td>28</td>
+                          <td>21</td>
+                          <td>46</td>
+                          <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>Lara</td>
+                            <td>290</td>
+                            <td>28</td>
+                            <td>21</td>
+                            <td>46</td>
+                            <td>38</td>
+                        </tr>
+                        <!-- and so on... -->
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>   
+            
+        
+    <div class="lower-data">
+        
+        <div class="split-screen">
+            <div class="left-side">
+            <button class="button-30" role="button" [routerLink]="['/classicgamescoresheet']">Start game</button>
+            </div>
+            <div class="right-side">
+                <button class="button-30" role="button" [routerLink]="['/exitpage']">Exit</button>
+            </div>
+        </div> 
+
+    </div>
+</div>
