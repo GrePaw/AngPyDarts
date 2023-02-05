@@ -1,6 +1,7 @@
 
 p{
     text-align: center;
+    font-family: "JetBrains Mono",monospace;
 }
 .split-screen{
   display: flex;
@@ -11,7 +12,9 @@ p{
 .left-side, .right-side{
   width: 50%;
   height: 100%;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 .container {
     /*width: 1200px;*/
