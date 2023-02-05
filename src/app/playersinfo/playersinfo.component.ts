@@ -6,13 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playersinfo.component.css']
 })
 export class PlayersinfoComponent implements OnInit {
-
+  
+  value:any;
   
   constructor() { 
     
   }
 
   ngOnInit(): void {
+  }
+
+  getName(){
+    console.log("Name entered is: " + this.value);
   }
 
 

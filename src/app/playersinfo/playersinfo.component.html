@@ -34,6 +34,7 @@
         <div class="split-screen">
             <div class="left-side">
                 <p>Add the names of the players individually</p>
+                <input type="text" [(ngModel)]= "value" (change)="getName();">
                 <button class="button-30" role="button" [routerLink]="['/exitpage']">Add</button>
 
             </div>
