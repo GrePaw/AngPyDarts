@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingpageclassicgameComponent } from './landingpageclassicgame/landingpageclassicgame.component';
 import { ClassicgamescoresheetComponent } from './classicgamescoresheet/classicgamescoresheet.component';
+import { ExitpageComponent } from './exitpage/exitpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageclassicgameComponent,
-    ClassicgamescoresheetComponent
+    ClassicgamescoresheetComponent,
+    ExitpageComponent
   ],
   imports: [
     BrowserModule,
