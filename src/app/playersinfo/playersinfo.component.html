@@ -1,0 +1,46 @@
+<div class="container">
+    <p>Let's play darts!</p>
+    <div class="upper-data">
+        <img src="../assets/background_dartboard.jpg">
+        <div class="upper-container">
+            <div class="top-left-side">
+                <button class="button-30" role="button" [routerLink]="['/landingpageclassicgame']">Home</button>
+            </div>
+            <div class="top-right-side">
+                <table class="upper-table">
+                    <thead class = "upper-table thead tr">
+                        <tr>
+                            <th>Order</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>      
+                            <td>Peter</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>      
+                            <td>Peter2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="lower-data">
+        
+        <div class="split-screen">
+            <div class="left-side">
+                <p>Add the names of the players individually</p>
+                <button class="button-30" role="button" [routerLink]="['/exitpage']">Add</button>
+
+            </div>
+            <div class="right-side">
+                <button class="button-30" role="button" [routerLink]="['/classicgamescoresheet']">Done</button>
+            </div>
+        </div> 
+
+    </div>
+</div>

@@ -1,0 +1,118 @@
+
+
+.upper-data {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 50%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+  }
+  /*to design or adjust the image inside the container */
+.upper-data img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  } 
+.upper-container {
+    /*position: relative;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;/*this is to keep the content on highest level visible*/
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-dark);
+    display: flex; /* so that I'm able to center the labels*/
+    flex-direction: row; /*so that the labels are on top of each other*/
+    align-items: center;
+    justify-content: center;
+}
+.top-left-side{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top
+    ;
+}
+.top-right-side{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin-right: 60px;
+    
+    justify-content: right;
+    align-items: center;
+  }
+
+.upper-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    color: var(black);
+    background-color: #E2DBD2;
+    font-size: 0.9em;
+    font-family: "JetBrains Mono",monospace;
+    text-align: center;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.upper-table thead tr {
+    background-color:var(--green-4);
+    color: #242927;
+    text-align: left;  
+}
+
+.upper-table th,
+.upper-table td {
+    padding: 12px 12px;
+}
+.upper-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: var(--green-3);
+}
+
+.upper-table tbody tr:nth-of-type(even) {
+    background-color: var(--white-2);
+    
+}
+
+.upper-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--grey-4);
+}
+
+.upper-table tbody tr.active-row {
+    font-weight: bold;
+    
+}
+
+.lower-data {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 50%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      background-color: #36395A;
+}
+
+  
+.split-screen{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.left-side, .right-side{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  
