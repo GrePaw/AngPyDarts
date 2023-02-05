@@ -61,15 +61,55 @@
             
         
     <div class="lower-data">
-        
-        <div class="split-screen">
-            <div class="left-side">
-            <button class="button-30" role="button" [routerLink]="['/classicgamescoresheet']">Start game</button>
-            </div>
-            <div class="right-side">
-                <button class="button-30" role="button" [routerLink]="['/exitpage']">Exit</button>
-            </div>
+        <div class="leftpane">
+            <p class="players_name_highlighted">Melissa</p>
+            <table class="lower-table-left">
+              <thead class="lower-table-left thead">
+                <tr>
+                  <td>Category</td>
+                  <td>Value</td>
+                </tr>
+              </thead>
+              <tbody class="lower-table-left tbody">
+                <tr>
+                  <td>Max. this game:</td>
+                  <td>80</td>
+                </tr>
+                <tr>
+                  <td>Max. ever:</td>
+                  <td>180</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+            
+        <div class="middlepane">
+            <p class="headline"> Choose input value</p>
+             
+            <table class="lower-table-middle">
+              <tbody>
+                <tr>
+                  <button class="button">10</button>
+                  <button class="button">18</button>
+                  <button class="button">20</button>  
+                  <button class="button">26</button>  
+                  <button class="button">36</button> 
+                </tr>
+                <tr>
+                  <button class="button">40</button>  
+                  <button class="button">48</button>  
+                  <button class="button">56</button> 
+                  <button class="button">58</button> 
+                  <button class="button">80</button>
+                </tr>
+              </tbody>
+            </table>
+        </div>   
+        <div class="rightpane">
+            <p class="headline">Or enter manually</p>
+            <button class="dummy_textfield_button">Enter text here</button>
+            <button class="dummy_safe_button">Safe</button>
         </div> 
-
+        
     </div>
 </div>

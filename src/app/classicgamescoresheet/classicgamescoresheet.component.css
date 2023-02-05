@@ -1,5 +1,5 @@
 
-/*lower part of the page */
+/*upper part of the page */
 
 .upper-data {
     position: relative;
@@ -114,6 +114,18 @@
 }
 
 /*lower part of the page */
+.players_name_highlighted{
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: left;
+    
+    color: var(black);
+    border:2px solid black;
+}
+.headline{
+    font-weight: bold;
+    font-size: 0.9em;
+}
 .lower-data {
     position: relative;
     overflow: hidden;
@@ -165,7 +177,7 @@
 }
 
 .lower-table-left {
-    font-family: sans-serif;
+    
     text-align: left;
 }
 
@@ -188,4 +200,53 @@
     padding: 12px 12px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*add styles for buttons */
+.button {
+    background-color:#f2f2f2;
+    border: none;
+    color: #242927;
+    padding: 20px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: #808B85
+}
+
+.button:active {
+  background-color:#96BC8A;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.dummy_textfield_button {
+    background-color:#f2f2f2; 
+    border: none;
+    color: #242927;
+    padding: 15px 32px;
+    margin: 20px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.dummy_safe_button {
+    background-color:#f2f2f2;
+    border: none;
+    color: #242927;
+    padding: 15px 32px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
 }
