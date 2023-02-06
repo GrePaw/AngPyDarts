@@ -46,37 +46,38 @@
                     </thead>
                     <tbody class = "upper-table tbody tr">
                         <tr>
-                            <td>Dom</td>
-                            <td>267</td>
-                            <td>30</td>
-                            <td>21</td>
-                            <td>43</td>
-                            <td>41</td>
+                            <td>{{playernames2[0].playername}}</td>
+                            <td>{{playernames2[0].curval}}</td>
+                            <td>{{playernames2[0].curav}}</td>
+                            <td>{{playernames2[0].prevthrow}}</td>
+                            <td>{{playernames2[0].lastav}}</td>
+                            <td>{{playernames2[0].longav}}</td>
                         </tr>
-                        <tr class="active-row">
-                            <td>Melissa</td>
-                            <td>288</td>
-                            <td>10</td>
-                            <td>15</td>
-                            <td>20</td>
-                            <td>18</td>
+                        <tr *ngIf="counter > 1" class="active-row">
+                            <td>{{playernames2[1].playername}}</td>
+                            <td>{{playernames2[1].curval}}</td>
+                            <td>{{playernames2[1].curav}}</td>
+                            <td>{{playernames2[1].prevthrow}}</td>
+                            <td>{{playernames2[1].lastav}}</td>
+                            <td>{{playernames2[1].longav}}</td>
                         </tr>
-                        <tr>
-                          <td>Peter</td>
-                          <td>235</td>
-                          <td>28</td>
-                          <td>21</td>
-                          <td>46</td>
-                          <td>38</td>
+                        <tr *ngIf="counter > 2">
+                          <td>{{playernames2[2].playername}}</td>
+                          <td>{{playernames2[2].curval}}</td>
+                          <td>{{playernames2[2].curav}}</td>
+                          <td>{{playernames2[2].prevthrow}}</td>
+                          <td>{{playernames2[2].lastav}}</td>
+                          <td>{{playernames2[2].longav}}</td>
                         </tr>
-                        <tr>
-                            <td>Lara</td>
-                            <td>290</td>
-                            <td>28</td>
-                            <td>21</td>
-                            <td>46</td>
-                            <td>38</td>
+                        <tr *ngIf="counter > 3">
+                            <td>{{playernames2[3].playername}}</td>
+                            <td>{{playernames2[3].curval}}</td>
+                            <td>{{playernames2[3].curav}}</td>
+                            <td>{{playernames2[3].prevthrow}}</td>
+                            <td>{{playernames2[3].lastav}}</td>
+                            <td>{{playernames2[3].longav}}</td>
                         </tr>
+
                         <!-- and so on... -->
                     </tbody>
                 </table>
