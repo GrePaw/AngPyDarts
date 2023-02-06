@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
-
+import { Playerdata } from './playerdata.module';
 
 @Component({
   selector: 'app-playersinfo',
@@ -9,15 +9,20 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 })
 export class PlayersinfoComponent {
   currentvalue="";
-  counter:number = 1;
+  counter:number = 0;
   playernames:string[]=[];
+  playernames2:Playerdata[]=[];
+  
 
   getVal(val: string) {
     this.currentvalue = val
     this.playernames = this.playernames.concat(val)
+    this.playernames2[this.counter] = new Playerdata(val,301)
     this.counter = this.counter +1
   }
 
 }
+
+
 
 
