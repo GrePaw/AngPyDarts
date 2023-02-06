@@ -10,18 +10,26 @@
                 <table class="upper-table">
                     <thead class = "upper-table thead tr">
                         <tr>
-                            <th>Order</th>
+                            <th>Order Players</th>
                             <th>Name</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>      
-                            <td>Peter</td>
+                            <td>{{playernames[0]}}</td>
                         </tr>
                         <tr>
-                            <td>2</td>      
-                            <td>Peter2</td>
+                            <td *ngIf="counter > 1">2</td>      
+                            <td *ngIf="counter > 1">{{playernames[1]}}</td>
+                        </tr>
+                        <tr>
+                            <td *ngIf="counter > 2">3</td>      
+                            <td *ngIf="counter > 2">{{playernames[2]}}</td>
+                        </tr>
+                        <tr>
+                            <td *ngIf="counter > 3">4</td>      
+                            <td *ngIf="counter > 3">{{playernames[3]}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -34,8 +42,10 @@
         <div class="split-screen">
             <div class="left-side">
                 <p>Add the names of the players individually</p>
-                <input type="text" [(ngModel)]= "value" (change)="getName();">
-                <button class="button-30" role="button" [routerLink]="['/exitpage']">Add</button>
+                <input  type="text" #box>
+                
+                <button *ngIf="counter < 5" class="button-30" role="button" (click)="getVal(box.value)">Add</button>
+                
 
             </div>
             <div class="right-side">
