@@ -6,8 +6,8 @@
             <div class="top-left-side">
                 <button class="button-30" role="button" [routerLink]="['/landingpageclassicgame']">Home</button>
             </div>
-            <div class="top-right-side">
-                <table class="upper-table">
+            <div class="top-right-side1">
+                <table *ngIf="alldonevariable == false" class="upper-table">
                     <thead class = "upper-table thead tr">
                         <tr>
                             <th>Order Players</th>
@@ -33,13 +33,61 @@
                         </tr>
                     </tbody>
                 </table>
+                <table *ngIf="alldonevariable == true" class="upper-table">
+                    <thead class = "upper-table thead tr">
+                        <tr>
+                            <th>Name</th>
+                            <th>Current value</th>
+                            <th>Current average</th>
+                            <th>Previous throw</th>
+                            <th>Last game average</th>
+                            <th>Long time average</th>
+                        </tr>
+                    </thead>
+                    <tbody class = "upper-table tbody tr">
+                        <tr>
+                            <td>Dom</td>
+                            <td>267</td>
+                            <td>30</td>
+                            <td>21</td>
+                            <td>43</td>
+                            <td>41</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>Melissa</td>
+                            <td>288</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>20</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                          <td>Peter</td>
+                          <td>235</td>
+                          <td>28</td>
+                          <td>21</td>
+                          <td>46</td>
+                          <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>Lara</td>
+                            <td>290</td>
+                            <td>28</td>
+                            <td>21</td>
+                            <td>46</td>
+                            <td>38</td>
+                        </tr>
+                        <!-- and so on... -->
+                    </tbody>
+                </table>
+
             </div>
 
         </div>
     </div>
     <div class="lower-data">
         
-        <div class="split-screen">
+        <div *ngIf="alldonevariable == false"  class="split-screen">
             <div class="left-side">
                 <p>Add the names of the players individually</p>
                 <input  type="text" #box>
@@ -49,9 +97,58 @@
 
             </div>
             <div class="right-side">
-                <button class="button-30" role="button" [routerLink]="['/classicgamescoresheet']">Done</button>
+                <button class="button-30" role="button" (click)="allDone()">Done</button>
                 
             </div>
+        </div>
+        <div *ngIf="alldonevariable == true" class="leftpane">
+            <p class="players_name_highlighted">Melissa</p>
+            <table class="lower-table-left">
+                <thead class="lower-table-left thead">
+                <tr>
+                    <td>Category</td>
+                    <td>Value</td>
+                </tr>
+                </thead>
+                <tbody class="lower-table-left tbody">
+                <tr>
+                    <td>Max. this game:</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Max. ever:</td>
+                    <td>180</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+            
+        <div *ngIf="alldonevariable == true" class="middlepane">
+            <p class="headline"> Choose input value</p>
+                
+            <table class="lower-table-middle">
+                <tbody>
+                <tr>
+                    <button class="button">10</button>
+                    <button class="button">18</button>
+                    <button class="button">20</button>  
+                    <button class="button">26</button>  
+                    <button class="button">36</button> 
+                </tr>
+                <tr>
+                    <button class="button">40</button>  
+                    <button class="button">48</button>  
+                    <button class="button">56</button> 
+                    <button class="button">58</button> 
+                    <button class="button">80</button>
+                </tr>
+                </tbody>
+            </table>
+        </div>   
+        <div *ngIf="alldonevariable == true" class="rightpane">
+            <p class="headline">Or enter manually</p>
+            <button class="dummy_textfield_button">Enter text here</button>
+            <button class="dummy_safe_button">Safe</button>
         </div> 
 
     </div>

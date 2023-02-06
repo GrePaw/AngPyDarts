@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingpageclassicgameComponent } from './landingpageclassicgame/landingpageclassicgame.component';
-import { ClassicgamescoresheetComponent } from './classicgamescoresheet/classicgamescoresheet.component';
+
 import { ExitpageComponent } from './exitpage/exitpage.component';
 import { PlayersinfoComponent } from './playersinfo/playersinfo.component';
 
@@ -12,7 +12,7 @@ import { PlayersinfoComponent } from './playersinfo/playersinfo.component';
   declarations: [
     AppComponent,
     LandingpageclassicgameComponent,
-    ClassicgamescoresheetComponent,
+    
     ExitpageComponent,
     PlayersinfoComponent
   ],

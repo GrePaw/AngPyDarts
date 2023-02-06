@@ -38,7 +38,7 @@
     align-items: top
     ;
 }
-.top-right-side{
+.top-right-side1{
     width: 90%;
     height: 100%;
     display: flex;
@@ -114,5 +114,134 @@
     justify-content: center;
     align-items: center;
 }
+
+
+.players_name_highlighted{
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: left;
+    
+    color: var(black);
+    border:2px solid black;
+}
+.headline{
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.leftpane {
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-color: var(--green-2);
+    border-collapse: collapse;
+    text-align: center; 
+    border-bottom-left-radius: 20px;
+    padding: 1em;
+}
+
+.topplane {
+    width: 75%;
+    height: 10%;
+    float: left;
+    background-color: var(--grey-4);
+}
+.middlepane {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: var(--green-3);
+    border-collapse: collapse;
+    text-align: center; 
+    padding: 1em;
+}
+
+.rightpane {   
+    width: 25%;   
+    height: 100%;   
+    position: relative;
+    float: right;   
+    background-color:var(--green-4);   
+    border-collapse:collapse;    
+    text-align: center; 
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+}
+
+.lower-table-left {
+    
+    text-align: left;
+}
+
+.lower-table-left thead {
+    font-weight: bold;
+}
+
+.lower-table-left tbody {
+    font-size: 0.9em;
+    border-bottom: 1px;
+    text-align: left;
+}
+
+.lower-table-left th,
+.lower-table-left td {
+    padding: 12px 12px;
+}
+
+.lower-table-middle {
+    padding: 12px 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*add styles for buttons */
+.button {
+    background-color:#f2f2f2;
+    border: none;
+    color: #242927;
+    padding: 20px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: #808B85
+}
+
+.button:active {
+  background-color:#96BC8A;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.dummy_textfield_button {
+    background-color:#f2f2f2; 
+    border: none;
+    color: #242927;
+    padding: 15px 32px;
+    margin: 20px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.dummy_safe_button {
+    background-color:#f2f2f2;
+    border: none;
+    color: #242927;
+    padding: 15px 32px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
   
   

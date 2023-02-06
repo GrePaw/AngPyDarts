@@ -1,10 +1,18 @@
 export class Playerdata {
     playername:string;
     curval:number;
+    curav:number;
+    prevthrow:number;
+    lastav:number;
+    longav:number;
   
-    constructor(p:string, n:number){
-      this.playername = p;
-      this.curval = n;
+    constructor(pn:string, curv:number, cura:number, pret:number, laav:number, loav:number ){
+      this.playername = pn;
+      this.curval = curv;
+      this.curav =cura;
+      this.prevthrow = pret;
+      this.lastav = laav,
+      this.longav = loav;
     }
 }
 
