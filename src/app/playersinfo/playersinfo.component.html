@@ -166,9 +166,19 @@
         <div *ngIf="alldonevariable == true" class="rightpane">
             <p class="headline">Or enter manually</p>
             <input type="valueAsnumber" #score>
-            <button (click)="addScore(score.value,playernames2)" class="dummy_safe_button">Safe</button>
-            <button (click)="skipPlayer(playernames2)" class="dummy_safe_button">Skip</button>
-            <button (click)="skipPlayer(playernames2)" class="dummy_safe_button">Skip</button>
+            <div class="split-screen">
+                <div class="left-side1">
+                    <button (click)="addScore(score.value,playernames2)" class="button-30" role="button">Safe</button>
+                </div>
+                <div class="middle-side1">
+                    <button (click)="skipPlayer(playernames2)" class="button-30" role="button">Skip</button>
+                </div>
+                <div class="right-side1">
+                    <button class="button-end" role="button">Over</button>
+                </div>
+                
+            </div>
+            
         </div> 
 
     </div>
