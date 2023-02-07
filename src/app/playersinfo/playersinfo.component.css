@@ -26,7 +26,7 @@
     height: 100%;
     background-color: var(--shadow-dark);
     display: flex; /* so that I'm able to center the labels*/
-    flex-direction: row; /*so that the labels are on top of each other*/
+    flex-direction: row; /*so that the labels are not on top of each other*/
     align-items: center;
     justify-content: center;
 }
@@ -166,6 +166,8 @@
     text-align: center; 
     border-bottom-right-radius: 20px;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .lower-table-left {

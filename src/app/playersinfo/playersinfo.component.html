@@ -45,7 +45,7 @@
                         </tr>
                     </thead>
                     <tbody class = "upper-table tbody tr">
-                        <tr>
+                        <tr *ngIf="activePnumber == 0 && counter >= 1" class ="active-row">
                             <td>{{playernames2[0].playername}}</td>
                             <td>{{playernames2[0].curval}}</td>
                             <td>{{playernames2[0].curav}}</td>
@@ -53,7 +53,23 @@
                             <td>{{playernames2[0].lastav}}</td>
                             <td>{{playernames2[0].longav}}</td>
                         </tr>
-                        <tr *ngIf="counter > 1" class="active-row">
+                        <tr *ngIf="activePnumber != 0 && counter >= 1">
+                            <td>{{playernames2[0].playername}}</td>
+                            <td>{{playernames2[0].curval}}</td>
+                            <td>{{playernames2[0].curav}}</td>
+                            <td>{{playernames2[0].prevthrow}}</td>
+                            <td>{{playernames2[0].lastav}}</td>
+                            <td>{{playernames2[0].longav}}</td>
+                        </tr>
+                        <tr *ngIf="activePnumber == 1 && counter > 1" class="active-row">
+                            <td>{{playernames2[1].playername}}</td>
+                            <td>{{playernames2[1].curval}}</td>
+                            <td>{{playernames2[1].curav}}</td>
+                            <td>{{playernames2[1].prevthrow}}</td>
+                            <td>{{playernames2[1].lastav}}</td>
+                            <td>{{playernames2[1].longav}}</td>
+                        </tr>
+                        <tr *ngIf="activePnumber != 1 && counter > 1">
                             <td>{{playernames2[1].playername}}</td>
                             <td>{{playernames2[1].curval}}</td>
                             <td>{{playernames2[1].curav}}</td>
@@ -151,6 +167,7 @@
             <p class="headline">Or enter manually</p>
             <input type="valueAsnumber" #score>
             <button (click)="addScore(score.value,playernames2)" class="dummy_safe_button">Safe</button>
+            <button (click)="skipPlayer(playernames2)" class="dummy_safe_button">Skip</button>
             <button (click)="skipPlayer(playernames2)" class="dummy_safe_button">Skip</button>
         </div> 
 
