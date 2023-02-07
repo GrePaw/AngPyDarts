@@ -63,7 +63,7 @@
 .upper-table thead tr {
     background-color:var(--green-4);
     color: #242927;
-    text-align: left;  
+    text-align: center;  
 }
 
 .upper-table th,

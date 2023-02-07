@@ -9,13 +9,13 @@
             <div class="top-right-side1">
                 <table *ngIf="alldonevariable == false" class="upper-table">
                     <thead class = "upper-table thead tr">
-                        <tr>
-                            <th>Order Players</th>
-                            <th>Name</th>
+                        <tr *ngIf="counter >= 1">
+                            <th>Order Player</th>
+                            <th>Name Player</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody class = "upper-table tbody tr">
+                        <tr *ngIf="counter >= 1">
                             <td>1</td>      
                             <td>{{playernames2[0].playername}}</td>
                         </tr>
@@ -77,8 +77,6 @@
                             <td>{{playernames2[3].lastav}}</td>
                             <td>{{playernames2[3].longav}}</td>
                         </tr>
-
-                        <!-- and so on... -->
                     </tbody>
                 </table>
 
@@ -89,21 +87,24 @@
     <div class="lower-data">
         
         <div *ngIf="alldonevariable == false"  class="split-screen">
-            <div class="left-side">
+            <div *ngIf="counter < 4" class="left-side">
                 <p>Add the names of the players individually</p>
-                <input  type="text" #box>
+                <input type="text" #box>
                 
                 <button class="button-30" role="button" (click)="getVal(box.value)">Add</button>
                 
 
             </div>
+            <div *ngIf="counter >= 4" class="left-side">
+                
+            </div>
             <div class="right-side">
-                <button class="button-30" role="button" (click)="allDone()">Done</button>
+                <button *ngIf="counter < 5" class="button-30" role="button" (click)="allDone()">Done</button>
                 
             </div>
         </div>
         <div *ngIf="alldonevariable == true" class="leftpane">
-            <p class="players_name_highlighted">Melissa</p>
+            <p class="players_name_highlighted">{{playernames2[activePnumber].playername}}</p>
             <table class="lower-table-left">
                 <thead class="lower-table-left thead">
                 <tr>
@@ -114,11 +115,11 @@
                 <tbody class="lower-table-left tbody">
                 <tr>
                     <td>Max. this game:</td>
-                    <td>80</td>
+                    <td>TBD</td>
                 </tr>
                 <tr>
                     <td>Max. ever:</td>
-                    <td>180</td>
+                    <td>TBD</td>
                 </tr>
                 </tbody>
             </table>
@@ -130,26 +131,27 @@
             <table class="lower-table-middle">
                 <tbody>
                 <tr>
-                    <button class="button">10</button>
-                    <button class="button">18</button>
-                    <button class="button">20</button>  
-                    <button class="button">26</button>  
-                    <button class="button">36</button> 
+                    <button (click)="addEntry(10,playernames2)" class="button">10</button>
+                    <button (click)="addEntry(18,playernames2)" class="button">18</button>
+                    <button (click)="addEntry(20,playernames2)" class="button">20</button>  
+                    <button (click)="addEntry(26,playernames2)" class="button">26</button>  
+                    <button (click)="addEntry(36,playernames2)" class="button">36</button> 
                 </tr>
                 <tr>
-                    <button class="button">40</button>  
-                    <button class="button">48</button>  
-                    <button class="button">56</button> 
-                    <button class="button">58</button> 
-                    <button class="button">80</button>
+                    <button (click)="addEntry(40,playernames2)" class="button">40</button>  
+                    <button (click)="addEntry(48,playernames2)" class="button">48</button>  
+                    <button (click)="addEntry(56,playernames2)" class="button">56</button> 
+                    <button (click)="addEntry(58,playernames2)" class="button">58</button> 
+                    <button (click)="addEntry(80,playernames2)" class="button">80</button>
                 </tr>
                 </tbody>
             </table>
         </div>   
         <div *ngIf="alldonevariable == true" class="rightpane">
             <p class="headline">Or enter manually</p>
-            <button class="dummy_textfield_button">Enter text here</button>
-            <button class="dummy_safe_button">Safe</button>
+            <input type="valueAsnumber" #score>
+            <button (click)="addScore(score.value,playernames2)" class="dummy_safe_button">Safe</button>
+            <button (click)="skipPlayer(playernames2)" class="dummy_safe_button">Skip</button>
         </div> 
 
     </div>
