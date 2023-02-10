@@ -6,10 +6,12 @@ export class Playerdata {
     lastav:number;
     longav:number;
     activeP:boolean;
+    numberThrows:number;
+    attendedGames:number;
 
 
   
-    constructor(pn:string, curv:number, cura:number, pret:number, laav:number, loav:number,aP:boolean ){
+    constructor(pn:string, curv:number, cura:number, pret:number, laav:number, loav:number,aP:boolean,nT:number, attG:number ){
       this.playername = pn;
       this.curval = curv;
       this.curav =cura;
@@ -17,6 +19,8 @@ export class Playerdata {
       this.lastav = laav,
       this.longav = loav;
       this.activeP = aP;
+      this.numberThrows = nT;
+      this.attendedGames = attG;
     }
 
 
