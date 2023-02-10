@@ -105,7 +105,7 @@
         <div *ngIf="alldonevariable == false"  class="split-screen">
             <div *ngIf="counter < 4" class="left-side">
                 <p>Add the names of the players individually</p>
-                <input type="text" #box>
+                <input type="text" placeholder="Enter player name here" #box>
                 
                 <button class="button-30" role="button" (click)="getVal(box.value)">Add</button>
                 
