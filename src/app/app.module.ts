@@ -7,6 +7,7 @@ import { LandingpageclassicgameComponent } from './landingpageclassicgame/landin
 
 import { ExitpageComponent } from './exitpage/exitpage.component';
 import { PlayersinfoComponent } from './playersinfo/playersinfo.component';
+import { ClassicgamescoresComponent } from './classicgamescores/classicgamescores.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlayersinfoComponent } from './playersinfo/playersinfo.component';
     LandingpageclassicgameComponent,
     
     ExitpageComponent,
-    PlayersinfoComponent
+    PlayersinfoComponent,
+    ClassicgamescoresComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,261 @@
+
+
+.upper-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*to design or adjust the image inside the container */
+.upper-data img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
+.upper-container {
+  /*position: relative;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;/*this is to keep the content on highest level visible*/
+  width: 100%;
+  height: 100%;
+  background-color: var(--shadow-dark);
+  display: flex; /* so that I'm able to center the labels*/
+  flex-direction: row; /*so that the labels are not on top of each other*/
+  align-items: center;
+  justify-content: center;
+}
+.top-left-side{
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top
+  ;
+}
+.top-right-side1{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  margin-right: 60px;
+  
+  justify-content: right;
+  align-items: center;
+}
+
+.upper-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  color: var(black);
+  background-color: #E2DBD2;
+  font-size: 0.9em;
+  font-family: "JetBrains Mono",monospace;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.upper-table thead tr {
+  background-color:var(--green-4);
+  color: #242927;
+  text-align: center;  
+}
+
+.upper-table th,
+.upper-table td {
+  padding: 12px 12px;
+}
+.upper-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: var(--green-3);
+}
+
+.upper-table tbody tr:nth-of-type(even) {
+  background-color: var(--white-2);
+  
+}
+
+.upper-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--grey-4);
+}
+
+.upper-table tbody tr.active-row {
+  font-weight: bold;
+  
+}
+
+.lower-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    background-color: #36395A;
+    display: flex; /* so that I'm able to center the labels*/
+    flex-direction: row;
+    color: #f2f2f2
+}
+
+
+.split-screen{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.left-side, .right-side{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side1, .middle-side1, .right-side1{
+  width: 1/3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.players_name_highlighted{
+  font-weight: bold;
+  font-size: 1.8em;
+  text-align: left;
+  
+  color: var(black);
+  border:2px solid black;
+}
+.headline{
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.leftpane {
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: var(--green-2);
+  border-collapse: collapse;
+  text-align: center; 
+  border-bottom-left-radius: 20px;
+  padding: 1em;
+}
+
+.topplane {
+  width: 75%;
+  height: 10%;
+  float: left;
+  background-color: var(--grey-4);
+}
+.middlepane {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: var(--green-3);
+  border-collapse: collapse;
+  text-align: center; 
+  padding: 1em;
+}
+
+.rightpane {   
+  width: 25%;   
+  height: 100%;   
+  position: relative;
+  float: right;   
+  background-color:var(--green-4);   
+  border-collapse:collapse;    
+  text-align: center; 
+  border-bottom-right-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.lower-table-left {
+  
+  text-align: left;
+}
+
+.lower-table-left thead {
+  font-weight: bold;
+}
+
+.lower-table-left tbody {
+  font-size: 0.9em;
+  border-bottom: 1px;
+  text-align: left;
+}
+
+.lower-table-left th,
+.lower-table-left td {
+  padding: 12px 12px;
+}
+
+.lower-table-middle {
+  padding: 12px 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*add styles for buttons */
+.button {
+  background-color:#f2f2f2;
+  border: none;
+  
+  padding: 20px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9em;
+  margin: 4px 4px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: "JetBrains Mono",monospace;
+  color: #36395A;
+}
+
+.button:hover {
+  background-color: #808B85
+}
+
+.button:active {
+background-color:#96BC8A;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+.dummy_textfield_button {
+  background-color:#f2f2f2; 
+  border: none;
+  color: #242927;
+  padding: 15px 32px;
+  margin: 20px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+.dummy_safe_button {
+  background-color:#f2f2f2;
+  border: none;
+  color: #242927;
+  padding: 15px 32px;
+  margin: 8px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+
