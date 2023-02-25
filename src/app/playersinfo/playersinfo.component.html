@@ -33,7 +33,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <app-classicgamescores *ngIf="alldonevariable == true" [listofplayers]="playernames2" [counterplayersnumber]=" counter" [activeplayernumber]="activePnumber">
+                <app-classicgamescores *ngIf="alldonevariable == true" [listofplayers2]="playernames2" [counterplayersnumber]=" counter" [activeplayernumber]="activePnumber">
 
                 </app-classicgamescores>
 
@@ -62,67 +62,14 @@
                 
             </div>
         </div>
-        <div *ngIf="alldonevariable == true" class="leftpane">
-            <p class="players_name_highlighted">{{playernames2[activePnumber].playername}}</p>
-            <table class="lower-table-left">
-                <thead class="lower-table-left thead">
-                <tr>
-                    <td>Category</td>
-                    <td>Value</td>
-                </tr>
-                </thead>
-                <tbody class="lower-table-left tbody">
-                <tr>
-                    <td>Max. this game:</td>
-                    <td>TBD</td>
-                </tr>
-                <tr>
-                    <td>Max. ever:</td>
-                    <td>TBD</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-            
-        <div *ngIf="alldonevariable == true" class="middlepane">
-            <p class="headline"> Choose input value</p>
-                
-            <table class="lower-table-middle">
-                <tbody>
-                <tr>
-                    <button (click)="addEntry(10,playernames2)" class="button">10</button>
-                    <button (click)="addEntry(18,playernames2)" class="button">18</button>
-                    <button (click)="addEntry(20,playernames2)" class="button">20</button>  
-                    <button (click)="addEntry(26,playernames2)" class="button">26</button>  
-                    <button (click)="addEntry(36,playernames2)" class="button">36</button> 
-                </tr>
-                <tr>
-                    <button (click)="addEntry(40,playernames2)" class="button">40</button>  
-                    <button (click)="addEntry(48,playernames2)" class="button">48</button>  
-                    <button (click)="addEntry(56,playernames2)" class="button">56</button> 
-                    <button (click)="addEntry(58,playernames2)" class="button">58</button> 
-                    <button (click)="addEntry(80,playernames2)" class="button">80</button>
-                </tr>
-                </tbody>
-            </table>
-        </div>   
-        <div *ngIf="alldonevariable == true" class="rightpane">
-            <p class="headline">Or enter manually</p>
-            <input type="valueAsnumber" #score>
-            <div class="split-screen">
-                <div class="left-side1">
-                    <button (click)="addScore(score.value,playernames2)" class="button-30" role="button">Safe</button>
-                </div>
-                <div class="middle-side1">
-                    <button (click)="skipPlayer(playernames2)" class="button-30" role="button">Skip</button>
-                </div>
-                <div class="right-side1">
-                    <button class="button-end" role="button">Over</button>
-                </div>
-                
-            </div>
-            
-        </div> 
+        <app-classicgamescoreentry 
+        class = "split-screen" 
+        *ngIf="alldonevariable == true" 
+        [listofplayers]="playernames2" 
+        [activeplayernumber]="activePnumber"
+        (throwcomplete)="onThrowcomplete($event)" >
+
+        </app-classicgamescoreentry>
 
     </div>
 </div>

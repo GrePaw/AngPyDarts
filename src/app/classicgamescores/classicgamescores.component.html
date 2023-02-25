@@ -1,5 +1,3 @@
-<p>classicgamescores works!</p>
-
 <table class="upper-table">
     <thead class = "upper-table thead tr">
         <tr>
@@ -12,53 +10,69 @@
         </tr>
     </thead>
     <tbody class = "upper-table tbody tr">
-        <tr *ngIf="activeplayernumber == 0 && counterplayersnumber >= 1" class ="active-row">
-            <td>{{listofplayers[0].playername}}</td>
-            <td>{{listofplayers[0].curval}}</td>
-            <td>{{listofplayers[0].curav}}</td>
-            <td>{{listofplayers[0].prevthrow}}</td>
-            <td>{{listofplayers[0].lastav}}</td>
-            <td>{{listofplayers[0].longav}}</td>
+        <tr *ngIf="activeplayernumber == 0 && counterplayersnumber >= 1" class ="upper-table tbody tr.active-row">
+            <td>{{listofplayers2[0].playername}}</td>
+            <td>{{listofplayers2[0].curval}}</td>
+            <td>{{listofplayers2[0].curav}}</td>
+            <td>{{listofplayers2[0].prevthrow}}</td>
+            <td>{{listofplayers2[0].lastav}}</td>
+            <td>{{listofplayers2[0].longav}}</td>
         </tr>
         <tr *ngIf="activeplayernumber != 0 && counterplayersnumber >= 1">
-            <td>{{listofplayers[0].playername}}</td>
-            <td>{{listofplayers[0].curval}}</td>
-            <td>{{listofplayers[0].curav}}</td>
-            <td>{{listofplayers[0].prevthrow}}</td>
-            <td>{{listofplayers[0].lastav}}</td>
-            <td>{{listofplayers[0].longav}}</td>
+            <td>{{listofplayers2[0].playername}}</td>
+            <td>{{listofplayers2[0].curval}}</td>
+            <td>{{listofplayers2[0].curav}}</td>
+            <td>{{listofplayers2[0].prevthrow}}</td>
+            <td>{{listofplayers2[0].lastav}}</td>
+            <td>{{listofplayers2[0].longav}}</td>
         </tr>
-        <tr *ngIf="activeplayernumber == 1 && counterplayersnumber > 1" class="active-row">
-            <td>{{listofplayers[1].playername}}</td>
-            <td>{{listofplayers[1].curval}}</td>
-            <td>{{listofplayers[1].curav}}</td>
-            <td>{{listofplayers[1].prevthrow}}</td>
-            <td>{{listofplayers[1].lastav}}</td>
-            <td>{{listofplayers[1].longav}}</td>
+        <tr *ngIf="activeplayernumber == 1 && counterplayersnumber > 1" class="upper-table tbody tr.active-row">
+            <td>{{listofplayers2[1].playername}}</td>
+            <td>{{listofplayers2[1].curval}}</td>
+            <td>{{listofplayers2[1].curav}}</td>
+            <td>{{listofplayers2[1].prevthrow}}</td>
+            <td>{{listofplayers2[1].lastav}}</td>
+            <td>{{listofplayers2[1].longav}}</td>
         </tr>
         <tr *ngIf="activeplayernumber != 1 && counterplayersnumber > 1">
-            <td>{{listofplayers[1].playername}}</td>
-            <td>{{listofplayers[1].curval}}</td>
-            <td>{{listofplayers[1].curav}}</td>
-            <td>{{listofplayers[1].prevthrow}}</td>
-            <td>{{listofplayers[1].lastav}}</td>
-            <td>{{listofplayers[1].longav}}</td>
+            <td>{{listofplayers2[1].playername}}</td>
+            <td>{{listofplayers2[1].curval}}</td>
+            <td>{{listofplayers2[1].curav}}</td>
+            <td>{{listofplayers2[1].prevthrow}}</td>
+            <td>{{listofplayers2[1].lastav}}</td>
+            <td>{{listofplayers2[1].longav}}</td>
         </tr>
-        <tr *ngIf="counterplayersnumber > 2">
-          <td>{{listofplayers[2].playername}}</td>
-          <td>{{listofplayers[2].curval}}</td>
-          <td>{{listofplayers[2].curav}}</td>
-          <td>{{listofplayers[2].prevthrow}}</td>
-          <td>{{listofplayers[2].lastav}}</td>
-          <td>{{listofplayers[2].longav}}</td>
+        <tr *ngIf="activeplayernumber==2 && counterplayersnumber > 2" class="upper-table tbody tr.active-row">
+            <td>{{listofplayers2[2].playername}}</td>
+            <td>{{listofplayers2[2].curval}}</td>
+            <td>{{listofplayers2[2].curav}}</td>
+            <td>{{listofplayers2[2].prevthrow}}</td>
+            <td>{{listofplayers2[2].lastav}}</td>
+            <td>{{listofplayers2[2].longav}}</td>
+          </tr>
+        <tr *ngIf="activeplayernumber!=2 && counterplayersnumber > 2">
+          <td>{{listofplayers2[2].playername}}</td>
+          <td>{{listofplayers2[2].curval}}</td>
+          <td>{{listofplayers2[2].curav}}</td>
+          <td>{{listofplayers2[2].prevthrow}}</td>
+          <td>{{listofplayers2[2].lastav}}</td>
+          <td>{{listofplayers2[2].longav}}</td>
         </tr>
-        <tr *ngIf="counterplayersnumber > 3">
-            <td>{{listofplayers[3].playername}}</td>
-            <td>{{listofplayers[3].curval}}</td>
-            <td>{{listofplayers[3].curav}}</td>
-            <td>{{listofplayers[3].prevthrow}}</td>
-            <td>{{listofplayers[3].lastav}}</td>
-            <td>{{listofplayers[3].longav}}</td>
+        <tr *ngIf="activeplayernumber==3 && counterplayersnumber > 3" class="upper-table tbody tr.active-row">
+            <td>{{listofplayers2[3].playername}}</td>
+            <td>{{listofplayers2[3].curval}}</td>
+            <td>{{listofplayers2[3].curav}}</td>
+            <td>{{listofplayers2[3].prevthrow}}</td>
+            <td>{{listofplayers2[3].lastav}}</td>
+            <td>{{listofplayers2[3].longav}}</td>
+        </tr>
+        <tr *ngIf="activeplayernumber!=3 && counterplayersnumber > 3">
+            <td>{{listofplayers2[3].playername}}</td>
+            <td>{{listofplayers2[3].curval}}</td>
+            <td>{{listofplayers2[3].curav}}</td>
+            <td>{{listofplayers2[3].prevthrow}}</td>
+            <td>{{listofplayers2[3].lastav}}</td>
+            <td>{{listofplayers2[3].longav}}</td>
         </tr>
     </tbody>
 </table>

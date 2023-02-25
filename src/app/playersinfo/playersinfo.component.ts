@@ -27,37 +27,14 @@ throw new Error('Method not implemented.');
     this.counter = this.counter +1
     console.log(this.counter)
   }
-
-  addScore(score: any, objectlist:Playerdata[]) {
-    this.addEntry(score, objectlist)
-  }
-
+  
   allDone(){
     this.alldonevariable = true
   }
 
-  addEntry(entryval:number,  objectlist:Playerdata[]) {
-      
-    objectlist[this.activePnumber].curval = objectlist[this.activePnumber].curval - entryval;
-    objectlist[this.activePnumber].numberThrows = objectlist[this.activePnumber].numberThrows + 3;
-    objectlist[this.activePnumber].curav = Math.trunc((301-objectlist[this.activePnumber].curval) /objectlist[this.activePnumber].numberThrows);
-    objectlist[this.activePnumber].prevthrow = entryval;
-
-    this.activePnumber = this.activePnumber +1;
-
-    if (this.activePnumber > (objectlist.length -1)){
-      this.activePnumber = 0
-    }
-   }
-
-  skipPlayer(objectlist:Playerdata[]){
-    objectlist[this.activePnumber].numberThrows = objectlist[this.activePnumber].numberThrows + 3;
-    this.activePnumber = this.activePnumber +1;
-
-    if (this.activePnumber > (objectlist.length -1)){
-      this.activePnumber = 0
-    }
-   }
+  onThrowcomplete(numb:number): void {
+    this.activePnumber = numb
+  }
 }
 
 

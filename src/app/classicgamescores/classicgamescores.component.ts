@@ -12,7 +12,7 @@ export class ClassicgamescoresComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() listofplayers: any;
+  @Input() listofplayers2: any;
   @Input()
   counterplayersnumber!: number;
   @Input()
