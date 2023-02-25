@@ -9,21 +9,24 @@ import { ExitpageComponent } from './exitpage/exitpage.component';
 import { PlayersinfoComponent } from './playersinfo/playersinfo.component';
 import { ClassicgamescoresComponent } from './classicgamescores/classicgamescores.component';
 import { ClassicgamescoreentryComponent } from './classicgamescoreentry/classicgamescoreentry.component';
+import { HttpClientModule} from '@angular/common/http';
+import { GetremotedataComponent } from './getremotedata/getremotedata.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageclassicgameComponent,
-    
     ExitpageComponent,
     PlayersinfoComponent,
     ClassicgamescoresComponent,
-    ClassicgamescoreentryComponent
+    ClassicgamescoreentryComponent,
+    GetremotedataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
