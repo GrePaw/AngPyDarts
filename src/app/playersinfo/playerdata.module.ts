@@ -20,7 +20,7 @@ export class Playerdata {
       this.longav = loav;
       this.activeP = aP;
       this.numberThrows = nT;
-      this.attendedGames = attG;
+      this.attendedGames= attG;
     }
 
 
